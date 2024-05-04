@@ -3,8 +3,8 @@ import { Routes } from 'react-router-dom';
 import { Route } from 'react-router';
 import loadable from '@loadable/component';
 
-const Login = loadable(() => import('@src/users/Login/index'));
-const SignUp = loadable(() => import('@src/users/Sign/index'));
+const Login = loadable(() => import('@src/members/Login/index'));
+const SignUp = loadable(() => import('@src/members/Sign/index'));
 
 const UserRoutes = () => {
   return (
