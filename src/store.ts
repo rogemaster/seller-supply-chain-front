@@ -5,7 +5,7 @@ type Authorization = {
 }
 
 const useAuthStore = create<Authorization>((set) => ({
-  auth: false
+  auth: true
 }));
 
 export default useAuthStore;
