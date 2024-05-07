@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from "@src/layout/common/Header";
+import MainHeader from "@src/layout/common/header";
 
 const Main = () => {
   return (
-    <Header />
+    <MainHeader />
   );
 };
 
