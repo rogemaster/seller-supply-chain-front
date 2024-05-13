@@ -2,14 +2,17 @@ import React from 'react';
 import { Routes } from 'react-router-dom';
 import { Route } from 'react-router';
 import loadable from '@loadable/component';
+import AppLayout from '@src/layout/common/AppLayout';
 
-const Main = loadable(() => import('./index'));
+const Dashboard = loadable(() => import('./Dashboard/index'));
 
 const MainRoutes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Main />} />
-    </Routes>
+    <AppLayout>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+      </Routes>
+    </AppLayout>
   );
 };
 

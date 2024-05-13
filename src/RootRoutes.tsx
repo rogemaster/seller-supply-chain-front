@@ -10,8 +10,6 @@ const Members = loadable(() => import('@src/members/routes'));
 const RootRoutes = () => {
   const auth = useAuthStore((state) => state.auth);
 
-  console.log('auth', auth);
-
   return (
     <Routes>
       <Route path="/" element={auth ? <Navigate replace to="/main" /> : <Navigate to="/members/login" />} />
