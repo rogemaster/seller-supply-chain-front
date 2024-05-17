@@ -1,21 +1,31 @@
-import React, {useState} from 'react';
+import React, { useCallback, useState } from 'react';
 import { IHeaderMenu } from '@src/interface/MainMenuInterface';
 import HeaderMainSubMenus from '@src/layout/common/header/components/HeaderMainSubMenus';
+import { HeaderMainSubMenuOptions } from '@src/shared/MenuOptions';
+import useHeaderMenuStore from '@src/layout/common/header/header.store';
 
 interface IMainMenuItem {
   menu: IHeaderMenu;
 }
 
 const HeaderMainMenuItem = ({ menu }: IMainMenuItem) => {
-  const [isShowMenu, setIsShowMenu] = useState<boolean>(false);
   const [selectMenu, setSelectMenu] = useState<string | null>(null);
+  const mainMenuOptions = useHeaderMenuStore((state) => state.mainMenuOptions);
 
-  const onMainMenu = (e: React.MouseEvent<HTMLButtonElement>) => {
-    console.log('main menu', e.currentTarget.value);
+  const onMainMenu = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
     const menu = e.currentTarget.value;
-    setIsShowMenu((prev) => !prev);
+
+    const findMenu = mainMenuOptions.find((option) => option.key === menu);
+    if (findMenu) {
+      findMenu.show = !findMenu.show;
+      mainMenuOptions.forEach((option) => {
+        if (option.key !== menu && option.show) {
+          option.show = false;
+        }
+      });
+    }
     setSelectMenu(menu);
-  };
+  }, []);
 
   return (
     <div className="relative">
@@ -23,7 +33,6 @@ const HeaderMainMenuItem = ({ menu }: IMainMenuItem) => {
         key={menu.key}
         type="button"
         className="flex items-center gap-x-1 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium select-none cursor-pointer"
-        aria-expanded={isShowMenu}
         value={menu.key}
         onClick={onMainMenu}
       >
@@ -36,7 +45,7 @@ const HeaderMainMenuItem = ({ menu }: IMainMenuItem) => {
           />
         </svg>
       </button>
-      <HeaderMainSubMenus menu={selectMenu} isOpen={isShowMenu} />
+      <HeaderMainSubMenus menu={selectMenu} />
     </div>
   );
 };

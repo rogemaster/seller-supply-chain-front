@@ -2,7 +2,7 @@ export interface IHeaderMenu {
   key: string;
   name: string;
   href: string;
-  current?: boolean;
+  show?: boolean;
 }
 
 export interface IHeaderMainSubMenu {
