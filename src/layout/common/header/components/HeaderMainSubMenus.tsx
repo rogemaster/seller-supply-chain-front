@@ -1,42 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import {PopoverPanel, Transition} from '@headlessui/react';
 import { HeaderMainSubMenuOptions } from '@src/shared/MenuOptions';
-import useHeaderMenuStore from '@src/layout/common/header/header.store';
 
 interface IMainSubMenu {
   menu: string | null;
 }
 
 const HeaderMainSubMenus = ({ menu }: IMainSubMenu) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const mainMenuOptions = useHeaderMenuStore((state) => state.mainMenuOptions);
-
-  useEffect(() => {
-    const findMenu = mainMenuOptions.find((option) => option.key === menu);
-    if (findMenu) {
-      setIsOpen(findMenu?.show || false);
-    }
-  }, [menu]);
 
   return (
-    <div
-      className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-gray-900/5"
-      style={{ display: isOpen ? '' : 'none' }}
+    <Transition
+      enter="transition ease-out duration-200"
+      enterFrom="opacity-0 translate-y-1"
+      enterTo="opacity-100 translate-y-0"
+      leave="transition ease-in duration-150"
+      leaveFrom="opacity-100 translate-y-0"
+      leaveTo="opacity-0 translate-y-1"
     >
-      {menu &&
-        HeaderMainSubMenuOptions[menu].map((subMenu) => (
-          <div
-            key={subMenu.key}
-            className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-          >
-            <div className="flex-auto">
-              <a href="#" className="block font-semibold text-gray-900">
-                {subMenu.name}
-                <span className="absolute inset-0"></span>
-              </a>
+      <PopoverPanel anchor="bottom" className="rounded-md bg-white text-sm/6 border">
+        <div className="p-3">
+          {menu && HeaderMainSubMenuOptions[menu].map((subMenu) => (
+            <div key={subMenu.key} className="block rounded-lg py-2 px-3 transition hover:bg-black/5">
+              <p className="font-semi-bold text-black">{subMenu.name}</p>
             </div>
-          </div>
-        ))}
-    </div>
+          ))}
+        </div>
+      </PopoverPanel>
+    </Transition>
   );
 };
 
