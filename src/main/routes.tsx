@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes } from 'react-router-dom';
 import { Route } from 'react-router';
 import loadable from '@loadable/component';
-import AppLayout from '@src/layout/common/AppLayout';
+import AppLayout from '@src/layout/AppLayout';
 
 const Dashboard = loadable(() => import('./Dashboard/index'));
 
