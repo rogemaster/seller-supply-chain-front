@@ -1,6 +1,6 @@
 import React, { ReactNode, useCallback } from 'react';
 import { IMenu } from '@src/interface/MenuInterface';
-import User from '@src/common/icon/User';
+import UserSvg from '@src/common/icon/UserSvg';
 
 interface IUserMenuItem {
   menu: IMenu;
@@ -14,13 +14,18 @@ const DropDownUserMenuItem = ({ menu }: IUserMenuItem) => {
         case 'MyPage': {
           return (
             <>
-              <User />
+              <UserSvg />
               {menu.name}
             </>
           );
         }
         case 'Payment': {
-          return menu.name;
+          return (
+            <>
+              <UserSvg />
+              {menu.name}
+            </>
+          );
         }
       }
     },

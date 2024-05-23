@@ -1,6 +1,6 @@
 import React from 'react';
 
-const User = () => {
+const UserSvg = () => {
   return (
     <svg
       className="fill-current"
@@ -22,4 +22,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default UserSvg;

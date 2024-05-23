@@ -4,7 +4,7 @@ import { Route } from 'react-router';
 import loadable from '@loadable/component';
 import useAuthStore from '@src/store';
 
-const Main = loadable(() => import('@src/main/routes'));
+const Main = loadable(() => import('@src/pages/routes'));
 const Members = loadable(() => import('@src/members/routes'));
 
 const RootRoutes = () => {

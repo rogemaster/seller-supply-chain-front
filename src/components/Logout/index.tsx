@@ -1,7 +1,7 @@
 import React from 'react';
 import loadable from "@loadable/component";
 
-const LogoutSVG = loadable(() => import('@src/common/icon/LogoutSVG'));
+const LogoutSVG = loadable(() => import('@src/common/icon/LogoutSvg'));
 
 const Logout = () => {
   return (

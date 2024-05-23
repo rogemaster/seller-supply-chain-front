@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Alarm = () => {
+const AlarmSvg = () => {
   return (
     <svg
       className="fill-current duration-300 ease-in-out"
@@ -18,4 +18,4 @@ const Alarm = () => {
   );
 };
 
-export default Alarm;
+export default AlarmSvg;

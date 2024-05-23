@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { IMenu } from '@src/interface/MenuInterface';
 import loadable from '@loadable/component';
-import DropDownArrow from '@src/common/icon/DropDownArrow';
+import DropDownArrowSvg from '@src/common/icon/DropDownArrowSvg';
 
 const SidebarSubMenuItem = loadable(() => import('@src/components/Sidebar/components/SidebarSubMenuItem'));
 
@@ -26,7 +26,7 @@ const SidebarMenuItem = ({ mainMenus }: ISideMenus) => {
         onClick={onClickSubMenuHandler}
       >
         {mainMenus.name}
-        <DropDownArrow isOpen={isSubMenuOpen} />
+        <DropDownArrowSvg isOpen={isSubMenuOpen} />
       </div>
       <SidebarSubMenuItem name={mainMenus.key} isOpen={isSubMenuOpen} />
     </li>

@@ -4,7 +4,7 @@ interface IProps {
   isOpen: boolean;
 }
 
-const DropDownArrow = ({ isOpen }: IProps) => {
+const DropDownArrowSvg = ({ isOpen }: IProps) => {
   return (
     <svg
       className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${isOpen && 'rotate-180'}`}
@@ -24,4 +24,4 @@ const DropDownArrow = ({ isOpen }: IProps) => {
   );
 };
 
-export default DropDownArrow;
+export default DropDownArrowSvg;

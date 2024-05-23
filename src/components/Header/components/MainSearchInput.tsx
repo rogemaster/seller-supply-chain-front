@@ -1,5 +1,5 @@
 import React, {FormEvent, useCallback} from 'react';
-import Search from "@src/common/icon/Search";
+import SearchSvg from "@src/common/icon/SearchSvg";
 
 const MainSearchInput = () => {
   const onSubmit = useCallback((e: FormEvent<HTMLFormElement | HTMLButtonElement>) => {
@@ -12,7 +12,7 @@ const MainSearchInput = () => {
       <form className="m-0" onSubmit={onSubmit} method="POST">
         <div className="relative">
           <button className="absolute left-0 top-1/2 -translate-y-1/2" onSubmit={onSubmit}>
-            <Search />
+            <SearchSvg />
           </button>
           <input type="text" className="w-full bg-transparent pl-9 pr-4 text-black focus:outline-none" />
         </div>

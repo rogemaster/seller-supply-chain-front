@@ -1,6 +1,6 @@
 import React from "react";
 
-const Search = () => {
+const SearchSvg = () => {
   return (
     <svg
       className="fill-gray-700 hover:fill-blue-700"
@@ -26,4 +26,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchSvg;

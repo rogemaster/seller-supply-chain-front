@@ -3,7 +3,7 @@ import gravatar from 'gravatar';
 import { UserInfo } from '@src/mock/UserInfo';
 import loadable from '@loadable/component';
 
-const DownArrow = loadable(() => import('@src/common/icon/DownArrow'));
+const DownArrow = loadable(() => import('@src/common/icon/DownArrowSvg'));
 const DropDownUserMenus = loadable(() => import('@src/components/UserMenu/components/DropDownUserMenus'));
 
 const UserMenu = () => {

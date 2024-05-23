@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DownArrow = () => {
+const DownArrowSvg = () => {
   return (
     <svg
       className="hidden fill-current sm:block"
@@ -20,4 +20,4 @@ const DownArrow = () => {
   );
 };
 
-export default DownArrow;
+export default DownArrowSvg;

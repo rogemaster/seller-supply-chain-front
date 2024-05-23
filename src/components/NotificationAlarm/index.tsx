@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from 'react';
 import loadable from "@loadable/component";
 
-const Alarm = loadable(() => import('@src/common/icon/Alarm'));
+const Alarm = loadable(() => import('@src/common/icon/AlarmSvg'));
 const NotificationList = loadable(() => import('@src/components/NotificationAlarm/components/NotificationList'))
 
 const NotificationAlarm = () => {

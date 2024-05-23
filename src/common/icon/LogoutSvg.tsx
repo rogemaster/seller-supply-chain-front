@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LogoutSVG = () => {
+const LogoutSvg = () => {
   return (
     <svg
       className="fill-current"
@@ -22,4 +22,4 @@ const LogoutSVG = () => {
   )
 }
 
-export default LogoutSVG;
+export default LogoutSvg;
