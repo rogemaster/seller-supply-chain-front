@@ -6,28 +6,16 @@ interface IProductItem {
 }
 
 const ProductItem = ({ item }: IProductItem) => {
-  const getShippingCost = useCallback((code: string) => {
+  const getShippingName = useCallback((code: string) => {
     switch (code) {
       case 'free': {
-        return (
-          <div className="flex items-center justify-center gap-3 p-2.5 xl:p-5">
-            <p className="text-sm text-black">선결제</p>
-          </div>
-        );
+        return '선결제';
       }
       case '': {
-        return (
-          <div className="flex items-center justify-center gap-3 p-2.5 xl:p-5">
-            <p className="text-sm text-black">착불</p>
-          </div>
-        );
+        return '착불';
       }
       default: {
-        return (
-          <div className="flex items-center justify-center gap-3 p-2.5 xl:p-5">
-            <p className="text-sm text-black">무료</p>
-          </div>
-        );
+        return '무료';
       }
     }
   }, []);
@@ -51,9 +39,12 @@ const ProductItem = ({ item }: IProductItem) => {
       <div className="flex items-center justify-center gap-3 p-2.5 xl:p-5">
         <p className="text-sm text-black">{item.price}</p>
       </div>
-      {getShippingCost(item.shipping_code)}
+      {}
       <div className="flex items-center justify-center gap-3 p-2.5 xl:p-5">
-        <p className="text-sm text-black">{item.insert_date}</p>
+        <p className="text-sm text-black">{getShippingName(item.shipping_code)}</p>
+      </div>
+      <div className="flex items-center justify-center gap-3 p-2.5 xl:p-5">
+        <p className="text-sm text-black">{item.register_date}</p>
       </div>
       <div className="flex items-center justify-center gap-3 p-2.5 xl:p-5">
         <button className="text-sm text-blue-600 cursor-pointer bg-transparent">수정</button>

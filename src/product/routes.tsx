@@ -9,6 +9,8 @@ const ProductRoutes = () => {
   return (
     <Routes>
       <Route path="/list" element={<ProductList />} />
+      <Route path="/register" element={<div></div>} />
+      <Route path="/modify/:sid" element={<div></div>} />
     </Routes>
   );
 };

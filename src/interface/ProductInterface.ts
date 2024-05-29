@@ -4,5 +4,5 @@ export interface IProduct {
   price: number,
   shipping_code: string,
   shipping_cost: number,
-  insert_date: string
+  register_date: string
 }

@@ -7,7 +7,7 @@ export const ProductData: IProduct[] = [
     price: 5080,
     shipping_code: 'free',
     shipping_cost: 0,
-    insert_date: '2024-05-28',
+    register_date: '2024-05-28',
   },
   {
     sid: 'sid000002',
@@ -15,7 +15,7 @@ export const ProductData: IProduct[] = [
     price: 5230,
     shipping_code: 'free',
     shipping_cost: 0,
-    insert_date: '2024-05-28',
+    register_date: '2024-05-28',
   },
   {
     sid: 'sid000003',
@@ -23,7 +23,7 @@ export const ProductData: IProduct[] = [
     price: 62710,
     shipping_code: 'before',
     shipping_cost: 2500,
-    insert_date: '2024-05-28',
+    register_date: '2024-05-28',
   },
   {
     sid: 'sid000004',
@@ -31,7 +31,7 @@ export const ProductData: IProduct[] = [
     price: 10950,
     shipping_code: 'free',
     shipping_cost: 0,
-    insert_date: '2024-05-28',
+    register_date: '2024-05-28',
   },
   {
     sid: 'sid000005',
@@ -39,7 +39,7 @@ export const ProductData: IProduct[] = [
     price: 33500,
     shipping_code: 'free',
     shipping_cost: 0,
-    insert_date: '2024-05-28',
+    register_date: '2024-05-28',
   },
   {
     sid: 'sid000006',
@@ -47,6 +47,6 @@ export const ProductData: IProduct[] = [
     price: 14900,
     shipping_code: 'free',
     shipping_cost: 0,
-    insert_date: '2024-05-28',
+    register_date: '2024-05-28',
   },
 ];

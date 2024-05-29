@@ -17,10 +17,9 @@ const AppLayout = ({ children }: IAppProps) => {
       {/* 사이드바 */}
         <Sidebar sidebarOpen={sidebarOpen} />
 
-        <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
+        <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden bg-slate-100">
           {/* 헤더 */}
           <Header />
-
           <main>
             <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
               {children}

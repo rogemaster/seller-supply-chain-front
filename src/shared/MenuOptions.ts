@@ -17,18 +17,18 @@ export const UserMenuOptions: IMenu[] = [
 export const SubMenuOptions: ISubMenu = {
   ShoppingMallManagement: [
     { key: 'shoppingMall_info', name: '쇼핑몰등록리스트', href: '/shopping-mall/info', show: false },
-    { key: 'shoppingMall_insert_setting', name: '쇼핑몰별설정리스트', href: '/shopping-mall/setting', show: false },
+    { key: 'shoppingMall_register_setting', name: '쇼핑몰별설정리스트', href: '/shopping-mall/setting', show: false },
   ],
   StockManagement: [
     { key: 'stock_list', name: '재고리스트', href: '/stock/list', show: false },
-    { key: 'stock_insert', name: '재고등록', href: '/stock/insert', show: false },
+    { key: 'stock_register', name: '재고등록', href: '/stock/register', show: false },
   ],
   ProductManagement: [
-    { key: 'product_insert', name: '상품등록', href: '/product/insert', show: false },
+    { key: 'product_register', name: '상품등록', href: '/product/register', show: false },
     { key: 'product_list', name: '상품리스트', href: '/product/list', show: false },
   ],
   ProductLinkManagement: [
-    { key: 'shoppingMall_product_insert', name: '쇼핑몰별상품등록', href: '/link/insert', show: false },
+    { key: 'shoppingMall_product_register', name: '쇼핑몰별상품등록', href: '/link/register', show: false },
     { key: 'shoppingMall_product_list', name: '쇼핑몰별등록상품리스트', href: '/link/list', show: false },
   ],
   OrderManagement: [
