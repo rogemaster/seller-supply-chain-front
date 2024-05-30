@@ -1,5 +1,4 @@
 import React from 'react';
-import AppLayout from '@src/layout/AppLayout';
 import { Routes } from 'react-router-dom';
 import { Route } from 'react-router';
 import loadable from '@loadable/component';

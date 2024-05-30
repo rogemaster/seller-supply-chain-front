@@ -13,11 +13,8 @@ const SidebarMenuItem = ({ mainMenus }: ISideMenus) => {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState<boolean>(false);
 
   const onClickSubMenuHandler = useCallback((e: any) => {
-    console.log(e);
     setIsSubMenuOpen((prev) => !prev);
   }, []);
-
-  console.log(mainMenus);
 
   return (
     <li>

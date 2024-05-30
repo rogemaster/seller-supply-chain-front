@@ -12,7 +12,7 @@ const ProductSearchBar = () => {
 
   return (
     <div className="rounded-sm border border-gray-100 bg-white px-5 pt-6 pb-2.5 mb-5 shadow sm:px-7 xl:pb-1">
-      <form action="#">
+      <form action="@src/product/List/ProductSearchBar#">
         <div className="mb-4">
           <div className="flex flex-row items-center gap-3">
             <label className="mr-4 text-black text-sm">일자</label>

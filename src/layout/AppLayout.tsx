@@ -1,8 +1,9 @@
-import React, {ReactNode, useState} from 'react';
-import loadable from "@loadable/component";
+import React, { ReactNode, useState } from 'react';
 
-const Sidebar = loadable(() => import('@src/components/Sidebar'))
-const Header = loadable(() => import('@src/components/Header'))
+import loadable from '@loadable/component';
+
+const Sidebar = loadable(() => import('@src/components/Sidebar'));
+const Header = loadable(() => import('@src/components/Header'));
 
 interface IAppProps {
   children: ReactNode;
@@ -14,7 +15,7 @@ const AppLayout = ({ children }: IAppProps) => {
   return (
     <div className="bg-blend-darken:text-gray-400">
       <div className="flex h-screen overflow-hidden">
-      {/* 사이드바 */}
+        {/* 사이드바 */}
         <Sidebar sidebarOpen={sidebarOpen} />
 
         <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden bg-slate-100">

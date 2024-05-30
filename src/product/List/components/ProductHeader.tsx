@@ -22,7 +22,7 @@ const ProductHeader = () => {
         <h5 className="text-sm font-bold uppercase">등록일자</h5>
       </div>
       <div className="p-2.5 text-center xl:p-5">
-        <h5 className="text-sm font-bold uppercase">수정</h5>
+        <h5 className="text-sm font-bold uppercase">관리</h5>
       </div>
     </div>
   );

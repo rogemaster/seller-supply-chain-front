@@ -6,6 +6,7 @@ interface INavigation {
 }
 
 const BreadcrumbNavigation = ({ pageName }: INavigation) => {
+  console.log(pageName);
   return (
     <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
       <h2 className="text-2xl font-semibold text-black">{pageName}</h2>
@@ -13,7 +14,7 @@ const BreadcrumbNavigation = ({ pageName }: INavigation) => {
       <nav>
         <ol className="flex items-center gap-2 text-sm">
           <li>
-            <Link className="font-medium" to="/">
+            <Link className="font-medium" to="/main">
               Main /
             </Link>
           </li>

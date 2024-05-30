@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkseller_supply_chain_front=self.webpackChunkseller_supply_chain_front||[]).push([[444],{2444:(e,l,s)=>{s.r(l),s.d(l,{default:()=>r});var n=s(6540);const r=()=>n.createElement("div",null,"상품등록")}}]);

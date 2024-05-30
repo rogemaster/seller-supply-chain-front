@@ -1,5 +1,6 @@
 import React, { ChangeEvent, useCallback } from 'react';
 import { IProduct } from '@src/interface/ProductInterface';
+import { Link } from 'react-router-dom';
 
 interface IProductItem {
   item: IProduct;
@@ -8,11 +9,14 @@ interface IProductItem {
 const ProductItem = ({ item }: IProductItem) => {
   const getShippingName = useCallback((code: string) => {
     switch (code) {
-      case 'free': {
+      case 'BEFORE_PAY': {
         return '선결제';
       }
-      case '': {
+      case 'DELIVERY_PAY': {
         return '착불';
+      }
+      case 'SOLD_OUT': {
+        return '품절';
       }
       default: {
         return '무료';
@@ -47,7 +51,9 @@ const ProductItem = ({ item }: IProductItem) => {
         <p className="text-sm text-black">{item.register_date}</p>
       </div>
       <div className="flex items-center justify-center gap-3 p-2.5 xl:p-5">
-        <button className="text-sm text-blue-600 cursor-pointer bg-transparent">수정</button>
+        <Link to={`/product/modify/${item.sid}`} className="text-sm text-blue-600 cursor-pointer bg-transparent">
+          수정
+        </Link>
       </div>
     </div>
   );

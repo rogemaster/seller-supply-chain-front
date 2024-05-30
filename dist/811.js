@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkseller_supply_chain_front=self.webpackChunkseller_supply_chain_front||[]).push([[811],{7811:(e,l,s)=>{s.r(l),s.d(l,{default:()=>t});var a=s(6540);const t=()=>a.createElement("div",{className:"flex mb-3"},a.createElement("h5",null,"상품 수 : ",a.createElement("span",{className:"text-red-500"},"6"),"건"))}}]);
