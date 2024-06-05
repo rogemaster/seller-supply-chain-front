@@ -6,3 +6,12 @@ export interface IProduct {
   shipping_cost: number,
   register_date: string
 }
+
+export interface IProductInformationProvisionNoticeItem {
+  key: string;
+  name: string;
+  value: string;
+}
+export interface ProductInformationProvisionNotice {
+  [key: string]: IProductInformationProvisionNoticeItem[];
+}
