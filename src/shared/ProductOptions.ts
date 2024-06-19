@@ -7,6 +7,17 @@ export const ProductStatusOptions = [
   { key: '004', name: '판매중지' },
 ];
 
+export const ProductSaleArea = [
+  { key: '001', name: '전국' },
+  { key: '002', name: '서울' },
+  { key: '003', name: '경기도' },
+  { key: '004', name: '충청도' },
+  { key: '005', name: '강원도' },
+  { key: '006', name: '전라도' },
+  { key: '007', name: '경상도' },
+  { key: '008', name: '제주도' },
+];
+
 export const ProductDeliveryOptions = [
   { key: '001', name: '무료배송' },
   { key: '002', name: '선결제' },
@@ -165,5 +176,5 @@ export const ProductInformationProvisionNoticeItemDetail: ProductInformationProv
     { key: 'delivery', name: '배송 및 설치', value: '' },
     { key: 'quality', name: '품질보증기준', value: '' },
     { key: 'afterServiceTelecom', name: 'A/S 책임자와 전화번호', value: '' },
-  ]
+  ],
 };
