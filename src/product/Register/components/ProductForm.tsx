@@ -4,6 +4,7 @@ import loadable from "@loadable/component";
 const ProductBasicInfo = loadable(() => import('@src/product/Register/components/ProductBasicInfo'));
 const ProductInformationProvisionNotice = loadable(() => import('@src/product/Register/components/ProductInformationProvisionNotice'));
 const ProductAdditionalInfo = loadable(() => import('@src/product/Register/components/ProductAdditionalInfo'));
+const ProductImageInfo = loadable(() => import('@src/product/Register/components/ProductImageInfo'));
 
 const ProductForm = () => {
   return (
@@ -15,11 +16,12 @@ const ProductForm = () => {
         <ProductInformationProvisionNotice />
         {/* 상품부가정보 */}
         <ProductAdditionalInfo />
-      {/* 상품이미지 */}
-      {/* 상품판매정보 */}
-      {/* 상품옵션정보 */}
-      {/* 상품상세설명 */}
-      {/* 상품등록&수정 이력 */}
+        {/* 상품이미지 */}
+        <ProductImageInfo />
+        {/* 상품판매정보 */}
+        {/* 상품옵션정보 */}
+        {/* 상품상세설명 */}
+        {/* 상품등록&수정 이력 */}
       </div>
     </form>
   );

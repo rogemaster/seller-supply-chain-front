@@ -18,6 +18,9 @@ const ProductInformationProvisionNotice = () => {
 
   return (
     <>
+      <div className="border-b border-gray-400 mb-4 pb-4">
+        <h3 className="font-semibold text-lg text-black">품목정보</h3>
+      </div>
       <div className="mb-4 flex flex-col gap-6 xl:flex-row">
         <div className="w-full xl:w-1/2">
           <label className="mb-2.5 block text-black">상품정보고시</label>
